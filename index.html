@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end starter kit</title>
+
+    <link rel="stylesheet" href="./assets/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_brand">COMPANY</a>
+            </div>
+
+            <div class="nav_toggle" id="nav_toggler">
+                <i class="ri-function-line"></i>
+            </div>
+
+            <div class="nav_menu" id="nav_menu">
+                <div class="nav_close" id="nav_closer">
+                    <i class="ri-close-line nav__close" id="nav_close"></i>
+                </div>
+
+                <ul class="nav_list">
+                    <li class="nav_item"><div href="#" class="nav_link dropdown">
+                        about
+                        <div class="dropdown_item">
+                            <a href="#" class="nav_link">history</a>
+                            <a href="#" class="nav_link">Mission</a>
+                        </div>
+                    </div></li>
+                    <li class="nav_item"><a href="#" class="nav_link">our work</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">our team</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="carousel" id="carousel">
+        <div class="carousel_item slide_effect">
+            <img src="./assets/images/bg.jpg" alt="bg.jpg">
+            <div class="carousel_caption">
+                <h1>this is a place where technology & creativity fused into digital chemistry</h1>
+                </div>
+        </div>
+        <div class="carousel_item slide_effect">
+            <img src="./assets/images/about-bg.jpg" alt="bg.jpg">
+            <div class="carousel_caption">
+            <h1>We don't have the best but we have the gratest team</h1>
+            </div>
+        </div>
+        
+        <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+        <a class="next" onclick="nextSlide(1)">&#10095;</a>
+
+        <div class="carousel_indicator">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="container">
+            <h1 class="values_title">Our values</h1>
+            <div class="values_item">
+                <div class="card bg-red-1 clr-white border-red-2">
+                    <div class="path bg-red-2"></div>
+                    <div class="card_title">
+                        <img src="./assets/images/lightbulb-o.png" class="card_icon" alt="bubl"/>
+                        <h3>Innovative</h3>
+                    </div>
+                    <div class="card_content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime exertationem dolorem deserunt, unde, eaque ipsa?</p>
+                    </div>
+                </div>
+                <div class="card bg-green-1 border-green-2 clr-white">
+                    <div class="path bg-green-2"></div>
+                    <div class="card_title">
+                        <img src="./assets/images/bank.png" style="width: 1.25rem;" class="card_icon" alt="bubl"/>
+                        <h3>lovalty</h3>
+                    </div>
+                    <div class="card_content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit similique eum itaque facere temporibus dolores.</p>
+                    </div>
+                </div>
+                <div class="card bg-blue-1 border-blue-2 clr-white">
+                    <div class="card_title">
+                        <img src="./assets/images/lightbulb-o.png" class="card_icon" alt="bubl"/>
+                        <h3>Respect</h3>
+                    </div>
+                    <div class="card_content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, sit? Tenetur et neque quod incidunt!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1>Contact</h1>
+            <form  name="myForm" action="#" class="form" onsubmit="event.preventDefault(); validateForm()">
+                <div class="form_group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form_input">
+                    <div class="form_alert clr-red-1" id="nameValidation"></div>
+                </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form_input">
+                    <div class="form_alert clr-red-1" id="emailValidation"></div>
+                </div>
+                <div class="form_group">
+                    <label for="message">Message</label>
+                    <textarea class="form_textarea" name="message" rows="5"></textarea>
+                    <div class="form_alert clr-red-1" id="msgValidation"></div>
+                </div>
+                <button type="submit" class="btn btn-blue-1">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span>Copyright &#169; 2016 PT.Company</span>
+            <div>
+                <a href="#"><img src="./assets/images/facebook-official.png" class="footer_icon" alt="facebook"></a>
+                <a href="#"><img src="./assets/images/twitter.png" class="footer_icon" alt="twitter"></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+     <script src="./assets/js/main.js"></script>
+</html>
+
